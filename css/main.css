@@ -1,0 +1,147 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+@media (min-width: 48em) {
+  .header li {
+    float: left !important;
+  }
+
+  .header li a {
+    padding: 20px 30px !important;
+  }
+
+  .header .menu {
+    clear: none !important;
+    float: right !important;
+    max-height: none !important;
+  }
+
+  .header .menu-icon {
+    display: none !important;
+  }
+}
+.homepage {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  background-image: repeating-linear-gradient(#e9e6e6, #a19f9f, #727272, #464646, #202020);
+  min-height: 900px;
+}
+
+.header {
+  background-color: rgba(233, 230, 230, 0.4);
+  box-shadow: 1px 1px 4px 0 rgba(0, 0, 0, 0.1);
+  position: fixed;
+  width: 100%;
+  z-index: 3;
+  display: flex;
+  flex-wrap: nowrap;
+}
+
+.header ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  overflow: hidden;
+  background-color: rgba(233, 230, 230, 0.4);
+}
+
+.header li a {
+  display: block;
+  padding: 20px 20px;
+  border-right: 1px solid #f4f4f4;
+  text-decoration: none;
+  color: #0e0d0d;
+  font-family: "Fira Sans", "Source Sans Pro", Helvetica, Arial, sans-serif;
+  margin-left: auto;
+  margin-right: auto;
+  flex-grow: 1;
+}
+
+.header li a:hover {
+  background-color: #f4f4f4;
+}
+
+.header .logo {
+  display: block;
+  float: left;
+  background-image: url(../img/logo-lorem.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  min-width: 80px;
+  min-height: 80px;
+  padding: 10px 20px;
+}
+
+.header .menu {
+  clear: both;
+  max-height: 0;
+  transition: max-height 0.2s ease-out;
+}
+
+.header .menu-icon {
+  cursor: pointer;
+  display: inline-block;
+  float: right;
+  padding: 28px 20px;
+  position: relative;
+  user-select: none;
+}
+
+.header .menu-icon .navicon {
+  background: #333;
+  display: block;
+  height: 2px;
+  position: relative;
+  transition: background 0.2s ease-out;
+  width: 18px;
+}
+
+.header .menu-icon .navicon:before,
+.header .menu-icon .navicon:after {
+  background: #333;
+  content: "";
+  display: block;
+  height: 100%;
+  position: absolute;
+  transition: all 0.2s ease-out;
+  width: 100%;
+}
+
+.header .menu-icon .navicon:before {
+  top: 5px;
+}
+
+.header .menu-icon .navicon:after {
+  top: -5px;
+}
+
+.header .menu-btn {
+  display: none;
+}
+
+.header .menu-btn:checked ~ .menu {
+  max-height: 240px;
+}
+
+.header .menu-btn:checked ~ .menu-icon .navicon {
+  background: transparent;
+}
+
+.header .menu-btn:checked ~ .menu-icon .navicon:before {
+  transform: rotate(-45deg);
+}
+
+.header .menu-btn:checked ~ .menu-icon .navicon:after {
+  transform: rotate(45deg);
+}
+
+.header .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:before,
+.header .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:after {
+  top: 0;
+}
+
+/*# sourceMappingURL=main.css.map */

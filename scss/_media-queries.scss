@@ -1,0 +1,16 @@
+@media (min-width: 48em) {
+  .header li {
+    float: left !important;
+  }
+  .header li a {
+    padding: 20px 30px !important;
+  }
+  .header .menu {
+    clear: none !important;
+    float: right !important;
+    max-height: none !important;
+  }
+  .header .menu-icon {
+    display: none !important;
+  }
+}
